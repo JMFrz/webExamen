@@ -8,9 +8,9 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 // Importar rutas
-const messageRoutes = require('./routes/messageRoutes');
 const userRoutes = require('./routes/userRoutes');
 const authRoutes = require('./routes/authRoutes');
+const reviewRoutes = require('./routes/reviewRoutes');
 
 const app = express();
 
@@ -37,8 +37,8 @@ connectDB();
 
 // Rutas
 app.use('/api', authRoutes);
-app.use('/api', messageRoutes);
 app.use('/api', userRoutes);
+app.use('/api', reviewRoutes);
 
 // Ruta de prueba
 app.get('/', (req, res) => {
@@ -46,15 +46,13 @@ app.get('/', (req, res) => {
     message: 'ReViews - Aplicación de Reseñas con Mapas',
     version: '1.0.0',
     endpoints: {
-      'GET /api/messages/user/:email': 'Obtener cabeceras de mensajes de un usuario',
-      'GET /api/message/:id': 'Obtener mensaje completo por ID',
-      'POST /api/message': 'Crear nuevo mensaje',
+      'GET /api/reviews': 'Obtener listado de reseñas',
+      'GET /api/review/:id': 'Obtener detalle de reseña',
+      'POST /api/review': 'Crear nueva reseña',
       'POST /api/auth/google': 'Login con Google (idToken)',
       'POST /api/auth/github': 'Login con GitHub (code)',
       'GET /api/auth/me': 'Obtener datos del usuario autenticado',
       'POST /api/users': 'Crear usuario',
-      'GET /api/users': 'Listar usuarios',
-      'GET /api/users/:id': 'Obtener usuario por ID',
       'GET /api/users/email/:email': 'Obtener usuario por email'
     }
   });
