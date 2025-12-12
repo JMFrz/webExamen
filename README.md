@@ -1,6 +1,6 @@
-# TextME - Aplicación de Mensajería Electrónica
+# ResenyApp - Reseñas de Establecimientos con Mapas
 
-Aplicación web de mensajería basada en Node.js, Express y MongoDB.
+Aplicación web de reseñas de establecimientos con mapas interactivos, basada en Node.js, Express y MongoDB.
 
 ## Instalación
 
