@@ -43,7 +43,7 @@ app.use('/api', userRoutes);
 // Ruta de prueba
 app.get('/', (req, res) => {
   res.json({
-    message: 'TextME - Aplicación de Mensajería Electrónica',
+    message: 'ReViews - Aplicación de Reseñas con Mapas',
     version: '1.0.0',
     endpoints: {
       'GET /api/messages/user/:email': 'Obtener cabeceras de mensajes de un usuario',

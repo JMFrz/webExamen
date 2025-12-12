@@ -51,7 +51,7 @@ app.use('/api', reviewRoutes);
 // Ruta raíz (info)
 app.get('/', (req, res) => {
   res.json({
-    message: 'TextME - Aplicación de Reseñas con Mapas (Vercel)',
+    message: 'ReViews - Aplicación de Reseñas con Mapas (Vercel)',
     version: '2.0.0',
     endpoints: {
       'GET /api/reviews': 'Obtener listado de reseñas',
